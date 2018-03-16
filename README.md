@@ -22,5 +22,11 @@ A Monitoring utility for analysing docker stack
     * add alert rules in `prometheus/alert.rules`.
  * Grafana :
     * You can configure your dashboards in grafana. It will give you graphical representation of all the metrics collected by prometheus.
+ * Exporters:
+    * exporters are needed to be run on the hosts that you have mentioned in the configuration file of prometheus.
+    1. node-exporter :
+      * ```docker service create --name node-exporter --network prometheus_network --mode global -p 9100:9100 prom/node-exporter```
+    2. cAdvisor :
+      * ```sudo docker run   --volume=/:/rootfs:ro   --volume=/var/run:/var/run:rw   --volume=/sys:/sys:ro   --volume=/var/lib/docker/:/var/lib/docker:ro   --volume=/dev/disk/:/dev/disk:ro   --publish=8080:8080   --detach=true   --name=cadvisor   google/cadvisor:latest```
 ## How to run
 ```ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d```
