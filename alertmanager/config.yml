@@ -1,0 +1,12 @@
+#global:
+#    slack_api_url: "https://hooks.slack.com/services/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"
+route:
+    receiver: 'slack'
+
+receivers:
+    - name: 'slack'
+      slack_configs:
+          - send_resolved: true
+            username: 'prometheus'
+            channel: '#posx_alerts'
+            api_url: 'https://hooks.slack.com/services/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'
