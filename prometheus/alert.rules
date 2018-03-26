@@ -46,7 +46,7 @@ groups:
     annotations:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
-- alert: storage-poll-job-worker_down
+- alert: storage_poll_job_worker_down
     expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage-poll-job-worker"})
     for: 5s
     labels:
