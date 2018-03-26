@@ -47,7 +47,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: storage_poll_job_worker_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage-poll-job-worker"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage_poll_job_worker"})
     for: 5s
     labels:
       severity: warning
@@ -55,7 +55,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: push_job_worker_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="push-job-worker"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="push_job_worker"})
     for: 5s
     labels:
       severity: warning
@@ -63,7 +63,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: sync_integration_job_worker_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="sync-integration-job-worker"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="sync_integration_job_worker"})
     for: 5s
     labels:
       severity: warning
@@ -71,7 +71,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: init_job_worker_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="init-job-worker"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="init_job_worker"})
     for: 5s
     labels:
       severity: warning
@@ -87,7 +87,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: frontend_nginx_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="frontend-nginx"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="frontend_nginx"})
     for: 5s
     labels:
       severity: warning
@@ -95,7 +95,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: storage_nginx_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage-nginx"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage_nginx"})
     for: 5s
     labels:
       severity: warning
@@ -103,7 +103,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: storage_php_web_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage-php-web"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage_php_web"})
     for: 5s
     labels:
       severity: warning
@@ -111,7 +111,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: storage_php_sync_scheduler_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage-php-sync-scheduler"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage_php_sync_scheduler"})
     for: 5s
     labels:
       severity: warning
@@ -119,7 +119,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: storage_php_sync_vend_worker_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage-php-sync-vend-worker"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage_php_sync_vend_worker"})
     for: 5s
     labels:
       severity: warning
@@ -127,7 +127,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: storage_php_sync_vend_worker_high_priority_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage-php-sync-vend-worker-high-priority"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage_php_sync_vend_worker_high_priority"})
     for: 5s
     labels:
       severity: warning
@@ -135,7 +135,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: storage_php_sync_vend_worker_push_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage-php-sync-vend-worker-push"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage_php_sync_vend_worker_push"})
     for: 5s
     labels:
       severity: warning
@@ -143,7 +143,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: storage_php_vend_clone_worker_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage-php-vend-clone-worker"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="storage_php_vend_clone_worker"})
     for: 5s
     labels:
       severity: warning
@@ -151,7 +151,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: auth_nginx_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="auth-nginx"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="auth_nginx"})
     for: 5s
     labels:
       severity: warning
@@ -159,7 +159,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: auth_php_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="auth-php"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="auth_php"})
     for: 5s
     labels:
       severity: warning
@@ -167,7 +167,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: export_nginx_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="export-nginx"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="export_nginx"})
     for: 5s
     labels:
       severity: warning
@@ -175,7 +175,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: export_php_web_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="export-php-web"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="export_php_web"})
     for: 5s
     labels:
       severity: warning
@@ -183,7 +183,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: export_php_worker_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="export-php-worker"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="export_php_worker"})
     for: 5s
     labels:
       severity: warning
@@ -191,7 +191,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: emailer_nginx_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="emailer-nginx"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="emailer_nginx"})
     for: 5s
     labels:
       severity: warning
@@ -199,7 +199,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: emailer_php_web_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="emailer-php-web"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="emailer_php_web"})
     for: 5s
     labels:
       severity: warning
@@ -223,7 +223,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: test_mysql_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="test-mysql"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="test_mysql"})
     for: 5s
     labels:
       severity: warning
@@ -279,7 +279,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "Instance= {{ $labels.instance }}, Service/Job ={{ $labels.job }} is down for more than 5 sec."
 - alert: stack_php_down
-    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="stack-php"})
+    expr: absent(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="stack_php"})
     for: 5s
     labels:
       severity: warning
